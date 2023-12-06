@@ -76,7 +76,7 @@ function generator(len) {
 }
 
 /**
- * Set validChars depending on witch checkboxes are checked.
+ * Set validChars depending on wich checkboxes are checked.
  */
 function setValidChars() {
   validChars = "";
