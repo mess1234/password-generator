@@ -1,11 +1,11 @@
 "use strict";
 
 // Char sets
-const digits = "0123456789";
-const uppLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const lowLetters = "abcdefghijklmnopqrstuvwxyz";
-const symbols = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
-var validChars;
+const DIGITS = "0123456789";
+const UP_LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const LO_LETTERS = "abcdefghijklmnopqrstuvwxyz";
+const SYMBOLS = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
+let validChars = "";
 
 /**
  * Copy password to clipboard.
@@ -81,16 +81,16 @@ function generator(len) {
 function setValidChars() {
   validChars = "";
   if (document.getElementById("digits").checked) {
-    validChars += digits;
+    validChars += DIGITS;
   }
   if (document.getElementById("uppercase").checked) {
-    validChars += uppLetters;
+    validChars += UP_LETTERS;
   }
   if (document.getElementById("lowercase").checked) {
-    validChars += lowLetters;
+    validChars += LO_LETTERS;
   }
   if (document.getElementById("symbols").checked) {
-    validChars += symbols;
+    validChars += SYMBOLS;
   }
 }
 
