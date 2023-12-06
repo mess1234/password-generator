@@ -4,6 +4,7 @@
 const digits = "0123456789";
 const uppLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lowLetters = "abcdefghijklmnopqrstuvwxyz";
+const symbols = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
 var validChars;
 
 /**
@@ -87,6 +88,9 @@ function setValidChars() {
   }
   if (document.getElementById("lowercase").checked) {
     validChars += lowLetters;
+  }
+  if (document.getElementById("symbols").checked) {
+    validChars += symbols;
   }
 }
 
