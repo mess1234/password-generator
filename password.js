@@ -4,7 +4,7 @@
 const DIGITS = "0123456789";
 const UP_LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const LO_LETTERS = "abcdefghijklmnopqrstuvwxyz";
-const SYMBOLS = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
+const SYMBOLS = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
 let validChars = "";
 
 /**
@@ -63,9 +63,8 @@ function writePwd() {
  */
 function generator(len) {
   setValidChars();
-  // No valid char => ''
-  if (validChars.length < 1) {
-    return "";
+  if (validChars.length === 0) {
+    return ""; // No valid char
   }
   // Create new password
   let pwd = "";
